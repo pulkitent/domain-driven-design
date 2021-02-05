@@ -4,15 +4,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Cart {
-    private List<Product> products;
+    private List<Item> items;
 
     public Cart() {
-        this.products = new LinkedList<>();
+        this.items = new LinkedList<>();
     }
 
-    public void add(Product product, int quantity) {
-        for (int index = 0; index < quantity; index++) {
-            this.products.add(product);
-        }
+    public void add(Item item) {
+        this.items.add(item);
     }
 }
