@@ -6,8 +6,8 @@ import com.thoughtworks.ddd.domain.Product;
 public class Startup {
     public static void main(String[] args) {
         Cart cart = new Cart();
-        Product cricketBat = new Product("GM Circket Bat", 2);
+        Product cricketBat = new Product("GM Circket Bat");
 
-        cart.add(cricketBat);
+        cart.add(cricketBat, 2);
     }
 }

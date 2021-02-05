@@ -10,7 +10,9 @@ public class Cart {
         this.products = new LinkedList<>();
     }
 
-    public void add(Product product) {
-        this.products.add(product);
+    public void add(Product product, int quantity) {
+        for (int index = 0; index < quantity; index++) {
+            this.products.add(product);
+        }
     }
 }
