@@ -13,4 +13,8 @@ public class Cart {
     public void add(Item item) {
         this.items.add(item);
     }
+
+    public void remove(Item item){
+        this.items.remove(item);
+    }
 }

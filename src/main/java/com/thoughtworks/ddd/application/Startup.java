@@ -12,5 +12,6 @@ public class Startup {
         Item batItem = new Item(cricketBat, 2);
 
         cart.add(batItem);
+        cart.remove(batItem);
     }
 }
