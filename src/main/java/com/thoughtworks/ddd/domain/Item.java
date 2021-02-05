@@ -3,8 +3,8 @@ package com.thoughtworks.ddd.domain;
 import java.util.Objects;
 
 public class Item {
-    Product product;
-    int quantity;
+    private Product product;
+    private int quantity;
 
     public Item(Product product, int quantity) {
         this.product = product;

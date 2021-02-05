@@ -7,11 +7,19 @@ import com.thoughtworks.ddd.domain.Product;
 public class Startup {
     public static void main(String[] args) {
         Cart cart = new Cart();
-
         Product cricketBat = new Product("GM Circket Bat");
         Item batItem = new Item(cricketBat, 2);
 
         cart.add(batItem);
-        cart.remove(batItem);
+//        cart.remove(batItem);
+
+        Cart anotherCart = new Cart();
+        Product anotherCricketBat = new Product("GM Circket Bat");
+        Item anotherBatItem = new Item(cricketBat, 2);
+
+        anotherCart.add(anotherBatItem);
+//        anotherCart.remove(anotherBatItem);
+
+        boolean isEqual = cart.equals(anotherCart);
     }
 }
