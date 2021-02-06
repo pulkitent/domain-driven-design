@@ -1,7 +1,10 @@
-package com.thoughtworks.ddd.domain.miscellaneous;
+package com.thoughtworks.ddd.account_service.application_service_account.domain;
+
+import com.thoughtworks.ddd.domain.miscellaneous.Address;
 
 import java.util.UUID;
 
+//I am also a aggregate
 public class BankAccount {
     private String accountNumber;
     private Address address;
@@ -11,7 +14,9 @@ public class BankAccount {
         this.address = address;
     }
 
-    void updateAddress(Address newAddress) {
+    //Logical Transaction starts
+    public void updateAddress(Address newAddress) {
         this.address = newAddress;
     }
+    //Transaction ends
 }

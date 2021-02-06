@@ -33,6 +33,8 @@ public class Cart {
                 products.add(item.getProduct());
             }
         }
+
+        //coupled
         return new Order(products, address);
     }
 
