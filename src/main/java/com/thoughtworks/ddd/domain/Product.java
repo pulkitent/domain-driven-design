@@ -1,5 +1,7 @@
 package com.thoughtworks.ddd.domain;
 
+import com.thoughtworks.ddd.domain.domain_service.CompetitorBasedPricer;
+
 import java.util.Objects;
 
 public class Product {
@@ -13,6 +15,10 @@ public class Product {
 
     public String getPrice() {
         return this.price.getValue() + this.price.getCurrencyCode();
+    }
+
+    public void setPriceBelowCompetition() {
+        this.price = CompetitorBasedPricer.getPriceFor(this.name, this.price);
     }
 
     @Override
