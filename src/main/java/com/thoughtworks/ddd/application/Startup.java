@@ -1,9 +1,6 @@
 package com.thoughtworks.ddd.application;
 
-import com.thoughtworks.ddd.domain.Cart;
-import com.thoughtworks.ddd.domain.Item;
-import com.thoughtworks.ddd.domain.Price;
-import com.thoughtworks.ddd.domain.Product;
+import com.thoughtworks.ddd.domain.*;
 
 import java.util.Currency;
 
@@ -24,6 +21,9 @@ public class Startup {
         Item batItem = new Item(cricketBat, 2);
         cart.add(batItem);
 //        cart.remove(batItem);
+
+        Address address = new Address("1", "2", "3");
+        cart.checkout(address);
 
 //        Cart anotherCart = new Cart();
 //        Price anotherPrice = new Price(10, Currency.getInstance("INR"));

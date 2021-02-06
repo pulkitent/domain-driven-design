@@ -7,6 +7,7 @@ import java.util.Objects;
 public class Cart {
     private List<Item> items;
     private List<Item> removedItems;
+    private boolean isCheckout;
 
     public Cart() {
         this.items = new LinkedList<>();
@@ -20,6 +21,19 @@ public class Cart {
     public void remove(Item item) {
         this.items.remove(item);
         this.removedItems.add(item);
+    }
+
+    public Order checkout(Address address) {
+        this.isCheckout = true;
+
+        List<Product> products = new LinkedList<>();
+        for (Item item : items) {
+            int quantity = item.getQuantity();
+            for (int index = 0; index < quantity; index++) {
+                products.add(item.getProduct());
+            }
+        }
+        return new Order(products, address);
     }
 
     @Override
