@@ -5,6 +5,8 @@ import com.thoughtworks.ddd.domain.Price;
 import java.util.HashMap;
 import java.util.Map;
 
+//Generally stateless
+// and created when model/entity can't take the responsibility
 public class CompetitorBasedPricer {
     private static final Map<String, Double> competitorProductPriceMap = new HashMap<>();
 
