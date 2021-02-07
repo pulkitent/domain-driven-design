@@ -15,6 +15,14 @@ public class Item {
         return product;
     }
 
+    public Double getPrice() {
+        return this.getProduct().getPrice();
+    }
+
+    public int getWeight() {
+        return this.getProduct().getWeightInGrams();
+    }
+
     public int getQuantity() {
         return quantity;
     }

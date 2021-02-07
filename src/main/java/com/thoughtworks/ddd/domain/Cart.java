@@ -36,6 +36,10 @@ public class Cart {
         return new Order(products, address);
     }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
